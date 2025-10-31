@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdatomic.h>
 #include "config.h"
 
 
@@ -11,8 +12,8 @@
 
 typedef struct {
     volatile uint16_t buf[RING_BUFFER_SIZE]; // power of two for cheap masking
-    volatile uint16_t head;     // ISR writes head
-    volatile uint16_t tail;     // main reads tail
+    _Atomic uint16_t head;     // ISR writes head
+    _Atomic uint16_t tail;     // main reads tail
 } RingBufferU16;
 
 bool RingBuffer_Init(RingBufferU16* rb);

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdatomic.h>
 #include "ring_buffer.h"
 
 
