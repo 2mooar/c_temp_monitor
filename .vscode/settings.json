@@ -1,0 +1,9 @@
+{
+  "cmake.buildDirectory": "build",
+  "cmake.generator": "Ninja",
+  "cmake.configureOnOpen": true,
+  "files.associations": {
+    "stdbool.h": "c",
+    "config.h": "c"
+  }
+}

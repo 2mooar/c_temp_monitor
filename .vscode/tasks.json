@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "rm -rf ./build",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Configure",
+      "type": "shell",
+      "command": "cmake -S . -B build -G Ninja",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "cmake --build build",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
